@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="75" cy="75" r="75" fill="#F1F1F2"/>
+        <g transform="translate(34 27)">
+            <path fill="#FAC9C8" stroke="#FAC9C8" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M75.426 43.177c4.487 5.42 7.111 11.975 7.111 19.036 0 18.65-18.307 33.768-40.889 33.768C19.066 95.981.76 80.863.76 62.213c0-7.957 3.333-15.271 8.908-21.043V8.892c0-4.91 3.99-8.892 8.889-8.892a8.887 8.887 0 0 1 8.888 8.892v21.646c4.425-1.354 9.21-2.094 14.204-2.094 5.678 0 11.086.956 16 2.684V8.885c0-4.907 3.99-8.885 8.89-8.885 4.908 0 8.888 3.98 8.888 8.885v34.292z"/>
+            <path stroke="#FEE6E5" stroke-width="4" d="M17 30h3.111V12.45a1.554 1.554 0 1 0-3.111 0V30zM65 30h3.111V12.45a1.554 1.554 0 1 0-3.111 0V30z"/>
+            <path stroke="#F05860" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" d="M23.889 72.889a8.889 8.889 0 1 0 17.778 0"/>
+            <ellipse cx="41.667" cy="66.667" fill="#F05860" stroke="#F05860" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" rx="7.111" ry="4.444"/>
+            <circle cx="26.889" cy="48.222" r="2" fill="#F05860" stroke="#F05860" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+            <circle cx="56.889" cy="48.222" r="2" fill="#F05860" stroke="#F05860" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+            <path stroke="#F05860" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" d="M41.667 72.889a8.889 8.889 0 1 0 17.778 0"/>
+        </g>
+    </g>
+</svg>
