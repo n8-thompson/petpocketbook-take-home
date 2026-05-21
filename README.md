@@ -42,9 +42,11 @@
 
   - `npm install`
   
-  * To run the app:
+  * To run the app (opens http://localhost:3000 in your browser):
 
   `npm start`
+
+  Set `OPEN_BROWSER=false` to skip opening the browser.
 
 # PetPocketbook Schedule API
 

@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('express-scheduler:server');
 var http = require('http');
+var open = require('open');
 
 /**
  * Get port from environment and store in Express.
@@ -87,4 +88,18 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+
+  if (process.env.OPEN_BROWSER === 'false' || process.env.NODE_ENV === 'production') {
+    return;
+  }
+
+  if (typeof addr === 'string') {
+    return;
+  }
+
+  var url = 'http://localhost:' + addr.port + '/';
+  console.log('Opening ' + url);
+  open(url).catch(function(err) {
+    console.error('Could not open browser:', err.message);
+  });
 }
