@@ -8,6 +8,28 @@
   * **Please do not spend more than 4 hours on this test**
   * **If it takes more than 4 hours just write how you would plan to finish the tasks**
 
+# AI Usage Disclosure
+
+  You are welcome to use AI tools while completing this exercise.
+  If you do use AI tooling, please include a brief write-up describing:
+
+  * Which tools you used
+    * was the AI integrated directly into your IDE/editor (such as Cursor, Copilot, Windsurf, etc.)
+    * or did you use a separate browser/app-based tool (ChatGPT, Claude web, Google, etc.)
+
+  * How you used the tool
+    * did you use any specific modes such as “plan,” “ask,” or “agent”
+    * did you provide the AI with the entire task and then review/tweak the results
+    * did you first come up with your own design/plan and then use AI to help implement parts incrementally
+    * did you primarily use it for debugging, brainstorming, implementation help, refactoring, or guidance
+    * Something else - please explain
+
+  * Were there portions you intentionally implemented yourself versus portions that were AI-assisted. Please explain why
+  * Approximately what percentage of the final implementation was AI-assisted
+
+  Please also include exported chat transcripts/prompts in your branch.
+  Using AI tools will not negatively impact your evaluation. We are primarily interested in understanding your engineering process, decision-making, and how you leverage available tools during development.
+
 # Features / Requirements
 
   1. For any day that doesn't already have a schedule you will initialize one using the PetPocketbook API (instructions below)
