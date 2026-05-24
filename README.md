@@ -60,15 +60,47 @@
 
 # How to run the app
 
-  * Do a npm install:
+This project has two pieces that share one repo:
 
-  - `npm install`
-  
-  * To run the app (opens http://localhost:3000 in your browser):
+* **Backend** — Express + SQLite, in this folder. Exposes `/api/schedule` and (in prod) serves the built SPA. Runs on `http://localhost:3000`.
+* **Frontend** — React + Vite SPA in [`client/`](client/). In dev runs on `http://localhost:5173` and proxies `/api` and `/images` to the backend.
 
-  `npm start`
+### First-time setup
 
-  Set `OPEN_BROWSER=false` to skip opening the browser.
+```bash
+npm install                # backend deps
+npm run client:install     # frontend deps (or `npm install` inside client/)
+```
+
+### Development (recommended)
+
+```bash
+npm run dev
+```
+
+This uses `concurrently` to run the Express API on `:3000` and the Vite dev server on `:5173`. Open `http://localhost:5173` in your browser. Edits to `client/src/**` hot-reload; API changes restart by re-running the script.
+
+### Production-style run
+
+```bash
+npm run start:prod
+```
+
+Builds the SPA into `client/dist/` and starts Express on `:3000`, which serves both the API and the static SPA at the same origin. Set `OPEN_BROWSER=false` to skip opening the browser.
+
+### API surface
+
+* `GET  /api/schedule?date=YYYY-MM-DD` — returns the stored schedule for that date, seeding from the PetPocketbook upstream on the first request.
+* `PUT  /api/schedule?date=YYYY-MM-DD` — body `{ appointments: [...] }`, replaces the day's schedule (used by drag-to-move).
+* `DELETE /api/schedule/:appointmentId?date=YYYY-MM-DD` — removes a single appointment (used by drag-to-trash).
+
+Schedules are persisted to `db/schedules.sqlite` (auto-created, gitignored).
+
+### Environment
+
+* `PORT` — backend port (default `3000`).
+* `OPEN_BROWSER` — set to `false` to skip opening a browser when starting Express.
+* `PETPOCKETBOOK_API_KEY` — override the upstream API key (defaults to the key in this README).
 
 # PetPocketbook Schedule API
 
